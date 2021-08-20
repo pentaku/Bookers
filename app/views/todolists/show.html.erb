@@ -1,0 +1,6 @@
+<h3>Title:</h3>
+<p><%= @list.title %></p>
+<h3>Body:</h3>
+<p><%= @list.body %></p>
+<%= link_to "Edit", edit_todolist_path(@list.id) %>
+<%= link_to "Back", edit_todolist_path(@list.id) %>
