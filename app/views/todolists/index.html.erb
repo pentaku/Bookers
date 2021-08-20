@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+
+<html>
+
 <h1>Books</h1>
 <% @lists.each do |list| %>
   <h3>Title</h3>
@@ -6,8 +10,9 @@
   <span><%= list.body %></span>
 <% end %>
 
-
-
+<p><%= link_to 'show', '/todolists/id/show' %></p>
+<P><%= link_to 'edit', '/todolists/id/edit' %></P>
+<p><%= link_to 'destroy','/todolists/destroy', method: :delete %></p>
 
 <h1>New book</h1>
 <%= form_with model: @list, url:'/todolists', local:true do |f| %>
@@ -17,3 +22,5 @@
   <%= f.text_area :body %>
   <%= f.submit 'Create Book' %>
 <% end %>
+
+</html>

@@ -25,6 +25,9 @@ class TodolistsController < ApplicationController
     redirect_to '/todolists/index'
   end
 
+  def destroy
+  end
+
 
 
   private
